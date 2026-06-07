@@ -1,0 +1,821 @@
+{
+  "metadata": {
+    "name": "notary_registration_chatbot_faq",
+    "description": "FAQ/intents for a chatbot on a notary appointment registration website.",
+    "language": "en",
+    "structure": "Each object contains an intent, grouped question variants, and one answer.",
+    "matching_notes": [
+      "Normalize user input to lowercase.",
+      "Ignore punctuation.",
+      "Use partial phrase matching.",
+      "Check specific intents before fallback.",
+      "Use fallback only when no intent matches."
+    ]
+  },
+  "fallback": {
+    "intent": "fallback",
+    "questions": [
+      "unknown question",
+      "not sure",
+      "help me",
+      "i do not know",
+      "i am confused"
+    ],
+    "answer": "I can help with notary appointments, document type selection, document uploads, identity verification, signature certification, certified copies, apostille, payment, and delivery. Describe what you need to do with the document, or upload it so I can help identify the right appointment type."
+  },
+  "faqs": [
+    {
+      "intent": "greeting",
+      "questions": [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "is anyone there",
+        "can you help me",
+        "i need help",
+        "i need notary help"
+      ],
+      "answer": "Hi. I can help you choose the right notary appointment, understand your document type, upload your document, check identity requirements, explain apostille, or guide you through booking."
+    },
+    {
+      "intent": "assistant_capabilities",
+      "questions": [
+        "what can you help me with",
+        "what do you do",
+        "how can you help",
+        "what can i ask you",
+        "what services can you explain",
+        "what is this assistant for"
+      ],
+      "answer": "I can help with choosing an appointment type, explaining notary services, checking what documents may be needed, guiding document upload, explaining identity verification, apostille, payment, delivery, and booking steps."
+    },
+    {
+      "intent": "what_notary_does",
+      "questions": [
+        "what does a notary do",
+        "what is a notary",
+        "what is the job of a notary",
+        "what does the notary do",
+        "explain notary",
+        "what is a notary public",
+        "why do people use notaries"
+      ],
+      "answer": "A notary is a legally authorised official who helps make certain documents legally reliable. A notary can verify identity, certify signatures, certify copies, prepare or authenticate legal documents, and confirm that a person signed a document willingly and correctly."
+    },
+    {
+      "intent": "when_need_notary",
+      "questions": [
+        "when do i need a notary",
+        "do i need a notary",
+        "why do i need a notary",
+        "when is a notary required",
+        "is a notary required",
+        "do i have to notarise this",
+        "do i have to notarize this",
+        "does my document need notarisation",
+        "does my document need notarization"
+      ],
+      "answer": "You usually need a notary when a document must be legally verified, signed in front of an authorised person, used for official purposes, used abroad, or accepted by a court, bank, company register, authority, embassy, or another institution."
+    },
+    {
+      "intent": "notarisation_meaning",
+      "questions": [
+        "what is notarisation",
+        "what is notarization",
+        "what does notarised mean",
+        "what does notarized mean",
+        "what does it mean to notarise a document",
+        "what does it mean to notarize a document",
+        "what is a notarised document",
+        "what is a notarized document"
+      ],
+      "answer": "Notarisation means a notary formally verifies part of a legal act, such as a signature, identity, copy, declaration, or document. It gives the document stronger legal reliability."
+    },
+    {
+      "intent": "notarial_deed",
+      "questions": [
+        "what is a notarial deed",
+        "what is notarial act",
+        "what is a deed by notary",
+        "do i need a notarial deed",
+        "notarial deed meaning"
+      ],
+      "answer": "A notarial deed is a formal legal document prepared or recorded by a notary. It is usually needed for more serious legal transactions, depending on the law and the document type."
+    },
+    {
+      "intent": "signature_certification",
+      "questions": [
+        "what is signature certification",
+        "certify my signature",
+        "notarise my signature",
+        "notarize my signature",
+        "witness my signature",
+        "i need my signature certified",
+        "signature notarisation",
+        "signature notarization",
+        "can the notary confirm my signature"
+      ],
+      "answer": "Signature certification means the notary confirms that a specific person signed the document. You usually need to prove your identity and sign during the appointment or through an approved digital signing process."
+    },
+    {
+      "intent": "certified_copy",
+      "questions": [
+        "certified copy",
+        "can you certify copies",
+        "copy certification",
+        "can you certify a copy of my passport",
+        "can you certify a copy of my diploma",
+        "can you certify a copy of my birth certificate",
+        "can you certify a copy of my marriage certificate",
+        "do i need the original for a certified copy"
+      ],
+      "answer": "A certified copy confirms that a copy matches the original document shown to the notary. You normally need to provide the original document, not only a scan or photo."
+    },
+    {
+      "intent": "appointment_booking",
+      "questions": [
+        "book appointment",
+        "how do i book",
+        "i want to book",
+        "appointment",
+        "make appointment",
+        "schedule appointment",
+        "notary appointment",
+        "how can i register for an appointment",
+        "how do i start booking"
+      ],
+      "answer": "To book, choose the correct appointment type, upload the required document if needed, enter your personal details, complete any identity or payment steps shown on the page, and confirm the appointment."
+    },
+    {
+      "intent": "appointment_type_selection",
+      "questions": [
+        "which appointment type should i choose",
+        "what appointment type do i need",
+        "i do not know which service to select",
+        "which service should i book",
+        "help me choose appointment type",
+        "what notary service do i need",
+        "which option should i select"
+      ],
+      "answer": "Choose the appointment type based on what you need done: signature certification, certified copy, power of attorney, company document, real estate document, apostille, or another legal document. If you upload the document or describe its purpose, I can help identify the likely appointment type."
+    },
+    {
+      "intent": "same_day_appointment",
+      "questions": [
+        "can i book today",
+        "same day appointment",
+        "urgent appointment",
+        "earliest appointment",
+        "appointment available today",
+        "appointment available tomorrow",
+        "how soon can i book"
+      ],
+      "answer": "Same-day or urgent availability depends on the current appointment calendar. Check the booking page for the earliest available slot."
+    },
+    {
+      "intent": "walk_in",
+      "questions": [
+        "can i walk in",
+        "do i need an appointment",
+        "can i come without appointment",
+        "walk in appointment",
+        "can i visit directly"
+      ],
+      "answer": "You should book an appointment before the notary meeting. This helps ensure the correct service, document, identity details, and time slot are prepared."
+    },
+    {
+      "intent": "reschedule_appointment",
+      "questions": [
+        "can i reschedule",
+        "change appointment time",
+        "change appointment date",
+        "move my appointment",
+        "i cannot attend my appointment",
+        "i need another time"
+      ],
+      "answer": "Use the reschedule option in your confirmation email or account if available. If you cannot find it, contact support before the appointment time."
+    },
+    {
+      "intent": "cancel_appointment",
+      "questions": [
+        "can i cancel",
+        "cancel appointment",
+        "delete my appointment",
+        "i do not need the appointment anymore",
+        "how do i cancel booking"
+      ],
+      "answer": "Use the cancellation link or contact support. Cancellation rules may depend on the appointment type and how soon the appointment is scheduled."
+    },
+    {
+      "intent": "appointment_duration",
+      "questions": [
+        "how long does appointment take",
+        "how much time does it take",
+        "appointment duration",
+        "is the appointment quick",
+        "how long is the notary meeting"
+      ],
+      "answer": "Simple signature or copy certification appointments are usually short, but timing depends on the document type, number of signers, identity checks, and whether apostille or delivery is needed."
+    },
+    {
+      "intent": "document_upload",
+      "questions": [
+        "can i upload my document",
+        "where do i upload",
+        "upload document",
+        "how do i upload",
+        "can i send the document",
+        "can i attach my file",
+        "document upload",
+        "upload file"
+      ],
+      "answer": "Use the upload section on this page. After uploading, I can help identify the likely document type and guide you to the correct appointment."
+    },
+    {
+      "intent": "document_detection",
+      "questions": [
+        "what document is this",
+        "can you detect my document",
+        "can you identify my document",
+        "what type of document did i upload",
+        "is this a power of attorney",
+        "is this a contract",
+        "is this an affidavit",
+        "is this a company document",
+        "classify my document"
+      ],
+      "answer": "Upload the document and I can help identify the likely document type, such as power of attorney, signature certification, certified copy, company document, declaration, real estate document, or apostille-related document."
+    },
+    {
+      "intent": "document_quality",
+      "questions": [
+        "is my upload clear enough",
+        "is my scan readable",
+        "is the photo okay",
+        "is the document blurry",
+        "can you read my document",
+        "is my file complete",
+        "missing pages",
+        "document quality"
+      ],
+      "answer": "The document should be complete, readable, upright, and not blurry. Include all pages, especially pages with names, signatures, dates, powers, declarations, or official stamps."
+    },
+    {
+      "intent": "wrong_document_uploaded",
+      "questions": [
+        "i uploaded the wrong document",
+        "wrong file uploaded",
+        "replace document",
+        "change uploaded document",
+        "remove uploaded document",
+        "i attached the wrong file"
+      ],
+      "answer": "Upload the correct file again if the page allows it. If the wrong file is already attached to a submitted booking, contact support or update the booking before the appointment."
+    },
+    {
+      "intent": "autofill_from_document",
+      "questions": [
+        "can you autofill from my document",
+        "autofill my details",
+        "fill the form from document",
+        "extract details from document",
+        "can you read the names from the document",
+        "can you fill booking details automatically"
+      ],
+      "answer": "If document autofill is available, the system can use the uploaded document to suggest details such as names, document type, dates, and relevant fields. Always review the filled information before submitting."
+    },
+    {
+      "intent": "required_documents",
+      "questions": [
+        "what documents do i need",
+        "what should i bring",
+        "what do i need for appointment",
+        "do i need passport",
+        "do i need original document",
+        "do i need proof of address",
+        "required documents"
+      ],
+      "answer": "You usually need a valid official photo ID and the document that needs notarisation. Depending on the case, you may also need originals, company documents, proof of authority, translations, or supporting certificates."
+    },
+    {
+      "intent": "identity_verification",
+      "questions": [
+        "what id do i need",
+        "passport enough",
+        "identity verification",
+        "can i use id card",
+        "can i use residence permit",
+        "can i use driving licence",
+        "how do you verify identity",
+        "id requirements"
+      ],
+      "answer": "You need a valid official photo ID, such as a passport or national ID card. For online appointments, identity verification is also required before or during the video process."
+    },
+    {
+      "intent": "expired_id",
+      "questions": [
+        "can i use expired passport",
+        "my passport is expired",
+        "expired id",
+        "can i use expired id card",
+        "my id is expired"
+      ],
+      "answer": "Usually, you need a valid official photo ID. If your only ID is expired, contact support or the notary office before booking."
+    },
+    {
+      "intent": "name_mismatch",
+      "questions": [
+        "my name is different on the document",
+        "passport name does not match",
+        "name mismatch",
+        "my married name is different",
+        "my document has old name",
+        "spelling mistake in my name"
+      ],
+      "answer": "If your name differs between your ID and document, you may need supporting proof such as a marriage certificate, name change certificate, or corrected document. Contact support if you are unsure before the appointment."
+    },
+    {
+      "intent": "sign_before_appointment",
+      "questions": [
+        "should i sign before appointment",
+        "can i sign before coming",
+        "i already signed the document",
+        "do i sign now",
+        "when should i sign",
+        "should i leave signature blank"
+      ],
+      "answer": "For signature certification, do not sign too early unless instructed. The notary usually needs to witness or verify the signing process."
+    },
+    {
+      "intent": "multiple_signers",
+      "questions": [
+        "do all signers need to attend",
+        "multiple people signing",
+        "two people need to sign",
+        "does everyone need appointment",
+        "can multiple signers join",
+        "do witnesses need to attend"
+      ],
+      "answer": "All people whose signatures must be certified usually need to attend and verify their identity. Witness requirements depend on the document type."
+    },
+    {
+      "intent": "online_notarisation",
+      "questions": [
+        "can i do this online",
+        "remote notarisation",
+        "online notarisation",
+        "online notarization",
+        "video notary",
+        "sign online",
+        "can i sign digitally",
+        "digital notary",
+        "remote appointment"
+      ],
+      "answer": "Many signature certification services can be done online through video identification and digital signing. Whether your exact document can be handled online depends on the document type and the country or institution where it will be used."
+    },
+    {
+      "intent": "online_requirements",
+      "questions": [
+        "what do i need for online appointment",
+        "webcam required",
+        "do i need camera",
+        "do i need microphone",
+        "online appointment requirements",
+        "video call requirements",
+        "do i need digital signature"
+      ],
+      "answer": "For an online notary appointment, you usually need a stable internet connection, camera, microphone, valid photo ID, the document to be signed, and access to the digital signing or identity verification process shown on the platform."
+    },
+    {
+      "intent": "online_validity",
+      "questions": [
+        "is online notarisation valid",
+        "is online notarization valid",
+        "is remote notary legally valid",
+        "will online notarisation be accepted",
+        "will digital notary be accepted",
+        "is video notary legal"
+      ],
+      "answer": "Online notarisation can be legally valid when completed through the required identity verification, video process, digital signature, and notary procedure. Acceptance can still depend on the document type and where the document will be used."
+    },
+    {
+      "intent": "power_of_attorney",
+      "questions": [
+        "power of attorney",
+        "poa",
+        "power attorney",
+        "notarise power of attorney",
+        "notarize power of attorney",
+        "certify power of attorney",
+        "i need a power of attorney",
+        "can you help with poa"
+      ],
+      "answer": "A power of attorney is a common notary document. Upload the document and select the appointment type related to power of attorney or signature certification. If it will be used abroad, apostille or translation may also be needed."
+    },
+    {
+      "intent": "poa_recipient_attendance",
+      "questions": [
+        "does the person receiving power need to attend",
+        "does attorney need to attend",
+        "does authorised person need to be present",
+        "does the representative need to attend",
+        "does the person i give power to need appointment"
+      ],
+      "answer": "Usually, the person giving the power must attend and verify identity. The person receiving the power normally does not need to attend unless the document or notary requires it."
+    },
+    {
+      "intent": "poa_abroad",
+      "questions": [
+        "power of attorney abroad",
+        "can poa be used abroad",
+        "poa for another country",
+        "power of attorney for pakistan",
+        "power of attorney for germany",
+        "power of attorney for embassy",
+        "poa apostille"
+      ],
+      "answer": "A power of attorney can often be used abroad, but it may need apostille, translation, or embassy legalisation depending on the destination country and the receiving institution."
+    },
+    {
+      "intent": "apostille_meaning",
+      "questions": [
+        "what is apostille",
+        "apostille meaning",
+        "what does apostille mean",
+        "explain apostille",
+        "what is an apostille certificate"
+      ],
+      "answer": "An apostille is an official certificate used for international recognition of public or notarised documents between countries that accept apostilles. It confirms the authority behind the signature, seal, or stamp."
+    },
+    {
+      "intent": "need_apostille",
+      "questions": [
+        "do i need apostille",
+        "does my document need apostille",
+        "apostille required",
+        "do i need apostille for abroad",
+        "do i need apostille for embassy",
+        "use document abroad"
+      ],
+      "answer": "You may need an apostille if the notarised document will be used abroad. It depends on the destination country and the institution requesting the document."
+    },
+    {
+      "intent": "apostille_service",
+      "questions": [
+        "can you arrange apostille",
+        "apostille service",
+        "get apostille",
+        "how do i get apostille",
+        "can notary get apostille",
+        "apostille delivery"
+      ],
+      "answer": "If apostille service is available for your document, select it during booking or ask support. Some documents can receive apostille after notarisation, especially when intended for international use."
+    },
+    {
+      "intent": "legalisation",
+      "questions": [
+        "what is legalisation",
+        "what is legalization",
+        "embassy legalisation",
+        "embassy legalization",
+        "country not in apostille",
+        "not hague convention",
+        "consular legalisation"
+      ],
+      "answer": "If the destination country does not accept apostilles, embassy or consular legalisation may be required instead. Check the requirements of the receiving country or institution."
+    },
+    {
+      "intent": "company_documents",
+      "questions": [
+        "company document",
+        "gmbh",
+        "company formation",
+        "shareholder resolution",
+        "commercial register",
+        "firmenbuch",
+        "business document",
+        "managing director signature",
+        "board resolution"
+      ],
+      "answer": "Many company documents can involve notarial certification, such as company formation, shareholder resolutions, managing director signatures, commercial register filings, or powers of attorney."
+    },
+    {
+      "intent": "company_authority",
+      "questions": [
+        "can company representative sign",
+        "proof of company authority",
+        "do i need company extract",
+        "do i need firmenbuch extract",
+        "who can sign for company",
+        "company representative appointment"
+      ],
+      "answer": "A company representative must prove identity and authority to sign. You may need a company register extract, articles of association, resolution, or power of attorney."
+    },
+    {
+      "intent": "real_estate_documents",
+      "questions": [
+        "property document",
+        "real estate",
+        "land register",
+        "grundbuch",
+        "purchase contract",
+        "mortgage",
+        "property sale",
+        "property purchase",
+        "escrow"
+      ],
+      "answer": "Real estate documents often require notarial involvement, especially contracts, land register documents, mortgages, escrow, or powers of attorney for sale or purchase."
+    },
+    {
+      "intent": "wills_inheritance",
+      "questions": [
+        "will",
+        "testament",
+        "inheritance",
+        "estate",
+        "probate",
+        "succession",
+        "make a will",
+        "change my will",
+        "revoke my will"
+      ],
+      "answer": "A notary can help with wills and inheritance-related documents. Because these documents have strict legal consequences, the notary should review the exact situation."
+    },
+    {
+      "intent": "family_documents",
+      "questions": [
+        "marriage contract",
+        "divorce agreement",
+        "parental consent",
+        "child travel consent",
+        "adoption document",
+        "guardianship document",
+        "family document",
+        "name change document"
+      ],
+      "answer": "Family-related legal documents may require notarisation or signature certification depending on their purpose. Upload the document or describe where it will be used so the correct appointment type can be selected."
+    },
+    {
+      "intent": "affidavit_declaration",
+      "questions": [
+        "affidavit",
+        "sworn declaration",
+        "statutory declaration",
+        "declaration under oath",
+        "notarise affidavit",
+        "notarize affidavit",
+        "certify declaration"
+      ],
+      "answer": "A notary may be able to certify declarations or signatures on declarations. Upload the document and mention where it will be used, since requirements differ by country and institution."
+    },
+    {
+      "intent": "translation",
+      "questions": [
+        "translation",
+        "certified translation",
+        "sworn translation",
+        "document in english",
+        "foreign language document",
+        "does document need translation",
+        "can i bring translation",
+        "translate before or after notarisation"
+      ],
+      "answer": "Translation rules depend on the document, language, and destination authority. Some documents require a certified or sworn translator, and sometimes notarisation or apostille must happen before translation."
+    },
+    {
+      "intent": "english_documents",
+      "questions": [
+        "can my document be in english",
+        "english document",
+        "do documents need to be in german",
+        "can you notarise english documents",
+        "can you notarize english documents"
+      ],
+      "answer": "Many English documents can be handled, but the notary must understand the document or receive a suitable translation. Acceptance also depends on the receiving institution."
+    },
+    {
+      "intent": "foreign_language_documents",
+      "questions": [
+        "can document be in another language",
+        "foreign language",
+        "arabic document",
+        "urdu document",
+        "turkish document",
+        "french document",
+        "spanish document",
+        "german document"
+      ],
+      "answer": "Foreign-language documents may be possible, but the notary or receiving authority may require a translation. Upload the document or describe the language and destination country."
+    },
+    {
+      "intent": "price_cost",
+      "questions": [
+        "how much",
+        "price",
+        "cost",
+        "fee",
+        "fees",
+        "notary cost",
+        "appointment price",
+        "how much does notarisation cost",
+        "how much does notarization cost"
+      ],
+      "answer": "The cost depends on the appointment type, number of documents, number of signatures, apostille, delivery, and urgency. Check the price shown during booking before confirming."
+    },
+    {
+      "intent": "payment_methods",
+      "questions": [
+        "how do i pay",
+        "payment",
+        "can i pay by card",
+        "can i pay cash",
+        "can i pay by bank transfer",
+        "payment method",
+        "when do i pay"
+      ],
+      "answer": "Follow the payment options shown during booking. Available payment methods depend on the platform checkout and appointment type."
+    },
+    {
+      "intent": "invoice_receipt",
+      "questions": [
+        "can i get invoice",
+        "can i get receipt",
+        "billing details",
+        "company invoice",
+        "vat invoice",
+        "payment receipt"
+      ],
+      "answer": "You can usually request an invoice or receipt through the booking or payment process. Add correct billing details before confirming if the appointment is for a company."
+    },
+    {
+      "intent": "delivery",
+      "questions": [
+        "how do i receive document",
+        "delivery",
+        "send document",
+        "can you email document",
+        "can i download document",
+        "physical copy",
+        "paper copy",
+        "post document",
+        "ship document"
+      ],
+      "answer": "After the appointment, you receive the notarised document according to the selected service. Digital documents may be available for download, and physical delivery may be available if selected."
+    },
+    {
+      "intent": "status_tracking",
+      "questions": [
+        "status of my request",
+        "is my appointment confirmed",
+        "has my document been reviewed",
+        "where is my document",
+        "did you send my document",
+        "track delivery",
+        "booking status"
+      ],
+      "answer": "Check your confirmation email or account for appointment and delivery status. If the status is unclear or urgent, contact support."
+    },
+    {
+      "intent": "office_location",
+      "questions": [
+        "where is your office",
+        "office address",
+        "location",
+        "where are you located",
+        "how do i get there",
+        "nearest station",
+        "parking",
+        "public transport"
+      ],
+      "answer": "Check the appointment page or confirmation email for the exact office address, access details, and whether the appointment is online or in person."
+    },
+    {
+      "intent": "opening_hours",
+      "questions": [
+        "opening hours",
+        "are you open today",
+        "are you open tomorrow",
+        "saturday opening",
+        "sunday opening",
+        "public holiday",
+        "working hours",
+        "business hours"
+      ],
+      "answer": "Opening hours and available appointment times depend on the booking calendar. Check the available slots on the appointment page."
+    },
+    {
+      "intent": "privacy_security",
+      "questions": [
+        "is my document safe",
+        "is upload secure",
+        "privacy",
+        "gdpr",
+        "who can see my document",
+        "do you store my document",
+        "delete my data",
+        "data protection",
+        "is my id stored"
+      ],
+      "answer": "Uploaded legal documents contain sensitive data. Use only the official upload flow and check the privacy policy for details about storage, access, retention, deletion, and identity data processing."
+    },
+    {
+      "intent": "legal_validity",
+      "questions": [
+        "is this legally binding",
+        "is notarised document valid",
+        "is notarized document valid",
+        "will this be accepted",
+        "can notarised document be rejected",
+        "does notarisation make it legal",
+        "does notarization make it legal"
+      ],
+      "answer": "A document may be legally binding depending on its content, signatures, form, and applicable law. Notarisation strengthens verification but does not automatically make every document valid for every purpose."
+    },
+    {
+      "intent": "notary_refusal",
+      "questions": [
+        "can notary refuse",
+        "why would notary reject",
+        "can my document be rejected",
+        "notary rejected document",
+        "what if document has errors",
+        "what if signer does not understand"
+      ],
+      "answer": "A notary may refuse if identity is unclear, the document is incomplete, the signer does not understand it, there is pressure or fraud risk, or the requested act is not legally allowed."
+    },
+    {
+      "intent": "legal_advice",
+      "questions": [
+        "can you give legal advice",
+        "is this legal advice",
+        "can you review my contract",
+        "can you check if document is valid",
+        "can you tell me if i should sign",
+        "can notary advise me"
+      ],
+      "answer": "I can help identify the document type and likely appointment category. Final legal advice or a full legal review should come from the notary or a qualified legal professional."
+    },
+    {
+      "intent": "human_support",
+      "questions": [
+        "human support",
+        "talk to someone",
+        "speak to staff",
+        "contact support",
+        "assistant cannot help",
+        "real person",
+        "i need human",
+        "transfer me"
+      ],
+      "answer": "Contact support or the notary office if your case is complex, urgent, involves legal uncertainty, or the assistant cannot identify the correct appointment type."
+    },
+    {
+      "intent": "thanks",
+      "questions": [
+        "thank you",
+        "thanks",
+        "that helps",
+        "okay",
+        "ok",
+        "perfect",
+        "great",
+        "understood"
+      ],
+      "answer": "You’re welcome. Continue with booking, upload your document, or ask about the next field on the page."
+    },
+    {
+      "intent": "goodbye",
+      "questions": [
+        "bye",
+        "goodbye",
+        "see you",
+        "talk later",
+        "i will come back later",
+        "done",
+        "finished"
+      ],
+      "answer": "Goodbye. You can continue your booking from the appointment page whenever you are ready."
+    },
+    {
+      "intent": "messy_vague_notary_request",
+      "questions": [
+        "need notary",
+        "need stamp",
+        "need signature",
+        "need legal paper",
+        "need document certified",
+        "notary for bank",
+        "notary for embassy",
+        "notary for visa",
+        "notary for pakistan",
+        "notary for germany",
+        "notary for usa",
+        "notary for uk"
+      ],
+      "answer": "I can help choose the right notary service. Tell me what the document is, where it will be used, and whether you need a signature certified, a copy certified, or an apostille. If you upload the document, I can help detect the likely document type."
+    }
+  ]
+}
